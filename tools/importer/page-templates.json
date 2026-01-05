@@ -1,0 +1,19 @@
+{
+  "templates": [
+    {
+      "name": "venclexta-aml-detail-aid",
+      "urls": [
+        "https://nehaadobe.github.io/aml-home/index.html"
+      ],
+      "description": "VENCLEXTA pharmaceutical detail aid page for AML indication with clinical data, study information, and ISI content",
+      "blocks": [
+        {
+          "name": "hero-aml",
+          "instances": [
+            "div.ssweaverSlide#AmlHomeSlide"
+          ]
+        }
+      ]
+    }
+  ]
+}
