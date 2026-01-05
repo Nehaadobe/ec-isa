@@ -1,0 +1,87 @@
+/* Tabs Study Variant - Clinical study design tabs with pharma styling */
+.tabs-study .tabs-study-list {
+  display: flex;
+  gap: 0;
+  max-width: 100%;
+  font-size: var(--body-font-size-s);
+  overflow-x: auto;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+@media (width >= 600px) {
+  .tabs-study .tabs-study-list {
+    font-size: var(--body-font-size-m);
+  }
+}
+
+.tabs-study .tabs-study-list button {
+  flex: 0 0 max-content;
+  margin: 0;
+  border: 2px solid #006666;
+  border-radius: 25px;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #006666;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tabs-study .tabs-study-list button:first-child {
+  border-radius: 25px 0 0 25px;
+}
+
+.tabs-study .tabs-study-list button:last-child {
+  border-radius: 0 25px 25px 0;
+}
+
+.tabs-study .tabs-study-list button:only-child {
+  border-radius: 25px;
+}
+
+.tabs-study .tabs-study-list button p {
+  margin: 0;
+}
+
+.tabs-study .tabs-study-list button[aria-selected='true'] {
+  background-color: #ffd700;
+  border-color: #ffd700;
+  color: #333;
+  cursor: default;
+}
+
+.tabs-study .tabs-study-list button:hover:not([aria-selected='true']) {
+  background-color: #e6f5f5;
+}
+
+.tabs-study .tabs-study-panel {
+  padding: 32px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tabs-study .tabs-study-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.tabs-study .tabs-study-panel h2,
+.tabs-study .tabs-study-panel h3 {
+  color: #006666;
+  margin-bottom: 16px;
+}
+
+.tabs-study .tabs-study-panel p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.tabs-study .tabs-study-panel img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}

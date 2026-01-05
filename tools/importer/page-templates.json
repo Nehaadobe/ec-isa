@@ -1,17 +1,17 @@
 {
   "templates": [
     {
-      "name": "venclexta-aml-detail-aid",
-      "urls": [
-        "https://nehaadobe.github.io/aml-home/index.html"
-      ],
-      "description": "VENCLEXTA pharmaceutical detail aid page for AML indication with clinical data, study information, and ISI content",
+      "name": "venclexta-aml-page",
+      "urls": ["https://nehaadobe.github.io/aml-home/index.html"],
+      "description": "VENCLEXTA AML pharmaceutical product page with hero, ISI content, and study design tabs",
       "blocks": [
         {
           "name": "hero-aml",
-          "instances": [
-            "div.ssweaverSlide#AmlHomeSlide"
-          ]
+          "instances": [".ssweaverSlide.active", "#AmlHomeSlide"]
+        },
+        {
+          "name": "tabs-study",
+          "instances": [".ssweaverModal#AmlHomeSlideStudyDesignModal", "#AmlHomeSlideStudyDesignModal"]
         }
       ]
     }

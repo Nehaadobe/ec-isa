@@ -1,0 +1,44 @@
+{
+  "variantName": "tabs-study",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-01-05T16:30:00.000Z",
+
+  "sourceContext": {
+    "originUrl": "https://nehaadobe.github.io/aml-home/index.html",
+    "originPage": "VENCLEXTA AML product page",
+    "blockPosition": "middle"
+  },
+
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "clinical-study",
+    "imagePattern": "mixed"
+  },
+
+  "contentPattern": {
+    "structure": "tabs with study design and baseline characteristics",
+    "tabCount": 2,
+    "imageCount": 1
+  },
+
+  "reuseGuidance": {
+    "suitableFor": [
+      "pharmaceutical product pages",
+      "clinical study information",
+      "medical research presentations"
+    ],
+    "notSuitableFor": [
+      "general navigation tabs",
+      "e-commerce product tabs",
+      "simple FAQ sections"
+    ]
+  },
+
+  "usage": {
+    "pagesUsing": ["/aml-home/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-05T16:30:00.000Z"
+  }
+}
