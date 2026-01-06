@@ -1,3 +1,101 @@
+.hero-container .hero-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero {
+  position: relative;
+  padding: 40px 24px;
+  min-height: 300px;
+}
+
+.hero h1 {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--background-color);
+}
+
+.hero picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero {
+    padding: 40px 32px;
+  }
+}
+
+/* Hero AML Navigation Bar */
+.hero.aml-nav {
+  display: block;
+  background: #004d4d;
+  padding: 0;
+  min-height: auto;
+}
+
+.hero.aml-nav > div {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.hero.aml-nav > div > div {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.hero.aml-nav > div > div > p {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin: 0;
+}
+
+.hero.aml-nav .nav-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  background: #003d3d;
+  color: white;
+  cursor: pointer;
+}
+
+.hero.aml-nav .nav-btn {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero.aml-nav .nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero.aml-nav .nav-btn.active {
+  background: #c5a028;
+  color: #004d4d;
+  font-weight: 600;
+}
+
 /* Hero AML Variant - Gray gradient with multi-color headline */
 .hero.aml {
   position: relative;
@@ -11,8 +109,12 @@
   text-align: center;
 }
 
+.hero.aml::before {
+  display: none;
+}
+
 .hero.aml picture {
-  display: none; /* Hide the image for this variant */
+  display: none;
 }
 
 .hero.aml > div {
@@ -37,6 +139,10 @@
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
+}
+
+.hero.aml .headline-gray-inline {
+  color: #555;
 }
 
 .hero.aml .headline-dark {
@@ -64,44 +170,51 @@
   margin-bottom: 20px;
 }
 
-.hero.aml > div:nth-child(3) > div strong {
-  font-weight: 400;
-}
-
 /* Statistics row */
-.hero.aml > div:nth-child(4) {
-  display: flex;
+.hero.aml .stats-row p,
+.hero.aml > div:nth-child(4) > div p {
+  display: flex !important;
+  flex-direction: row !important;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 20px;
   margin-bottom: 20px;
 }
 
 .hero.aml .stat-group {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero.aml .stat-inline {
+  display: block;
 }
 
 .hero.aml .stat-label {
-  font-size: 16px;
+  font-size: 18px;
   color: #006d6d;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .hero.aml .stat-value {
-  font-size: 32px;
+  font-size: 18px;
   color: #006d6d;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .hero.aml .stat-ci {
   font-size: 14px;
   color: #666;
+  display: block;
 }
 
 .hero.aml .stat-vs {
   font-size: 16px;
   color: #666;
   font-weight: 400;
+  align-self: flex-start;
+  margin-top: 5px;
 }
 
 /* HR/OS stats */
@@ -137,12 +250,144 @@
     font-size: 18px;
   }
 
-  .hero.aml > div:nth-child(4) {
+  .hero.aml > div:nth-child(4) > div {
     flex-direction: column;
     gap: 15px;
   }
 
   .hero.aml .stat-value {
     font-size: 24px;
+  }
+}
+
+/* AML Action Buttons (NCCN, Study Design) */
+.hero.aml-buttons {
+  background: linear-gradient(180deg, #c9c9c9 0%, #b5956a 100%);
+  padding: 30px 24px;
+  min-height: auto;
+}
+
+.hero.aml-buttons > div > div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero.aml-buttons > div > div > p {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 100%;
+}
+
+.hero.aml-buttons .action-btn {
+  display: inline-block;
+  padding: 15px 50px 15px 25px;
+  background: transparent;
+  border: 2px solid #006d6d;
+  border-radius: 30px;
+  color: #006d6d;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 280px;
+  transition: all 0.2s;
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.hero.aml-buttons .action-btn:hover {
+  background: rgba(0, 109, 109, 0.1);
+}
+
+.hero.aml-buttons .action-btn::after {
+  content: "⊕";
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* AML Navigation Cards (Overall Survival, Remission, etc.) */
+.hero.aml-cards {
+  background: #004d4d;
+  padding: 20px 24px;
+  min-height: auto;
+}
+
+.hero.aml-cards > div > div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.hero.aml-cards > div > div > p {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
+}
+
+.hero.aml-cards .nav-card {
+  display: inline-block;
+  padding: 20px 60px 20px 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #006d6d;
+  border-radius: 8px;
+  color: #004d4d;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 200px;
+  transition: all 0.2s;
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.hero.aml-cards .nav-card:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: #00a0a0;
+}
+
+.hero.aml-cards .nav-card::after {
+  content: "→";
+  font-size: 16px;
+  background: #006d6d;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .hero.aml-buttons > div > div,
+  .hero.aml-buttons > div > div > p {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero.aml-buttons .action-btn {
+    min-width: 250px;
+  }
+
+  .hero.aml-cards > div > div,
+  .hero.aml-cards > div > div > p {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }
