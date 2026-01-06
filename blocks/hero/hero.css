@@ -246,6 +246,96 @@
   text-transform: uppercase;
 }
 
+/* Buttons row inside hero.aml */
+.hero.aml .aml-buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 30px 20px;
+}
+
+.hero.aml .action-btn {
+  display: inline-block;
+  padding: 15px 50px 15px 25px;
+  background: transparent;
+  border: 2px solid #006d6d;
+  border-radius: 30px;
+  color: #006d6d;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 280px;
+  transition: all 0.2s;
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.hero.aml .action-btn:hover {
+  background: rgba(0, 109, 109, 0.1);
+}
+
+.hero.aml .action-btn::after {
+  content: "⊕";
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Cards row inside hero.aml */
+.hero.aml .aml-cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.hero.aml .nav-card {
+  display: inline-block;
+  padding: 20px 60px 20px 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #006d6d;
+  border-radius: 8px;
+  color: #004d4d;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 200px;
+  transition: all 0.2s;
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.hero.aml .nav-card:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: #00a0a0;
+}
+
+.hero.aml .nav-card::after {
+  content: "→";
+  font-size: 16px;
+  background: #006d6d;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 900px) {
   .hero.aml {
     min-height: 400px;
@@ -269,11 +359,26 @@
   .hero.aml .stat-value {
     font-size: 24px;
   }
+
+  .hero.aml .aml-buttons-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero.aml .action-btn {
+    min-width: 250px;
+  }
+
+  .hero.aml .aml-cards-row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }
 
 /* AML Action Buttons (NCCN, Study Design) */
 .hero.aml-buttons {
-  background: linear-gradient(180deg, #c9c9c9 0%, #b5956a 100%);
+  background: linear-gradient(180deg, #c9c9c9 0%, #b5b5b5 100%);
   padding: 30px 24px;
   min-height: auto;
 }
@@ -326,7 +431,7 @@
 
 /* AML Navigation Cards (Overall Survival, Remission, etc.) */
 .hero.aml-cards {
-  background: #004d4d;
+  background: #b5b5b5;
   padding: 20px 24px;
   min-height: auto;
 }
