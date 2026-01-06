@@ -400,12 +400,36 @@
 }
 
 .hero.aml-isi > div {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .hero.aml-isi > div > div {
   margin-bottom: 20px;
+}
+
+/* Two-column layout for ISI content */
+.hero.aml-isi .isi-columns,
+.hero.aml-isi > div > div.isi-columns,
+.hero.aml-isi > div > div > p {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 40px !important;
+  margin: 0;
+}
+
+.hero.aml-isi .isi-column-left,
+.hero.aml-isi .isi-column-right {
+  display: block;
+}
+
+.hero.aml-isi .isi-column-left .isi-text,
+.hero.aml-isi .isi-column-right .isi-text {
+  margin-bottom: 15px;
+}
+
+.hero.aml-isi .isi-column-right .isi-subsection {
+  margin-top: 15px;
 }
 
 .hero.aml-isi .isi-header {
@@ -484,5 +508,16 @@
 
   .hero.aml-isi .isi-header {
     font-size: 16px;
+  }
+
+  .hero.aml-isi .isi-columns,
+  .hero.aml-isi .isi-columns > p {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero.aml-isi .isi-column-right {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
   }
 }
