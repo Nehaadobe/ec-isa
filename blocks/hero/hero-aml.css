@@ -1,63 +1,125 @@
-/* Hero AML Variant - Teal overlay with patient image */
+/* Hero AML Variant - Gray gradient with multi-color headline */
 .hero.aml {
   position: relative;
   min-height: 500px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 60px 24px;
-  background: linear-gradient(135deg, #006666 0%, #004d4d 50%, transparent 50%);
-}
-
-.hero.aml::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(0, 77, 77, 0.95) 0%, rgba(0, 77, 77, 0.7) 40%, transparent 70%);
-  z-index: 1;
+  background: linear-gradient(180deg, #e8e8e8 0%, #c9c9c9 100%);
+  text-align: center;
 }
 
 .hero.aml picture {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.hero.aml img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: right center;
+  display: none; /* Hide the image for this variant */
 }
 
 .hero.aml > div {
   position: relative;
   z-index: 2;
-  max-width: 600px;
-  margin-left: 5%;
+  max-width: 900px;
+  width: 100%;
 }
 
-.hero.aml p:first-of-type {
-  color: #ffd700;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-}
-
-.hero.aml h1 {
-  color: #fff;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  text-transform: uppercase;
-}
-
-.hero.aml p:last-of-type {
-  color: #fff;
+/* Main headline container */
+.hero.aml > div:nth-child(2) > div {
   font-size: 18px;
-  margin-top: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+/* Style for the headline - uses spans for multi-color */
+.hero.aml .headline-teal {
+  color: #006d6d;
+  font-size: 24px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.hero.aml .headline-dark {
+  color: #333;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1.1;
+}
+
+.hero.aml .headline-gold {
+  color: #c5a028;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1.1;
+}
+
+/* Median Overall Survival label */
+.hero.aml > div:nth-child(3) > div {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero.aml > div:nth-child(3) > div strong {
+  font-weight: 400;
+}
+
+/* Statistics row */
+.hero.aml > div:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.hero.aml .stat-group {
+  text-align: center;
+}
+
+.hero.aml .stat-label {
+  font-size: 16px;
+  color: #006d6d;
+  font-weight: 600;
+}
+
+.hero.aml .stat-value {
+  font-size: 32px;
+  color: #006d6d;
+  font-weight: 700;
+}
+
+.hero.aml .stat-ci {
+  font-size: 14px;
+  color: #666;
+}
+
+.hero.aml .stat-vs {
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+}
+
+/* HR/OS stats */
+.hero.aml > div:nth-child(5) > div {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Study description */
+.hero.aml > div:nth-child(6) > div {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 @media (max-width: 900px) {
@@ -66,16 +128,21 @@
     padding: 40px 20px;
   }
 
-  .hero.aml h1 {
-    font-size: 28px;
+  .hero.aml .headline-dark,
+  .hero.aml .headline-gold {
+    font-size: 32px;
   }
 
-  .hero.aml > div {
-    max-width: 100%;
-    margin-left: 0;
+  .hero.aml .headline-teal {
+    font-size: 18px;
   }
 
-  .hero.aml::before {
-    background: rgba(0, 77, 77, 0.85);
+  .hero.aml > div:nth-child(4) {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero.aml .stat-value {
+    font-size: 24px;
   }
 }
