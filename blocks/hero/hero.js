@@ -30,10 +30,10 @@ function decorateAmlHero(block) {
     const content = row.querySelector('div');
     if (!content) return;
 
+    const text = content.textContent.trim();
+
     // Row 2: Headlines (index 1)
     if (index === 1) {
-      const text = content.textContent.trim();
-
       let html = '';
 
       // Look for VENCLEXTA + AZACITIDINE ... WAS PROVEN TO HELP
@@ -58,8 +58,6 @@ function decorateAmlHero(block) {
 
     // Row 4: Statistics (index 3)
     if (index === 3) {
-      const text = content.textContent.trim();
-
       // Parse statistics - look for months values with specific patterns
       const venValue = text.match(/VEN\+AZA\s*([\d.]+)\s*months/i);
       // For AZA, look for "vs AZA" or standalone "AZA" followed by number
@@ -83,6 +81,34 @@ function decorateAmlHero(block) {
         `;
         p.classList.add('stats-row');
       }
+    }
+
+    // Buttons row - detect by content
+    if (text.includes('National Comprehensive Cancer Network') || text.includes('Study Design')) {
+      const buttons = [];
+      if (text.includes('National Comprehensive Cancer Network')) {
+        buttons.push('National Comprehensive Cancer Network\u00AE (NCCN\u00AE)');
+      }
+      if (text.includes('Study Design')) {
+        buttons.push('Study Design');
+      }
+      const p = content.querySelector('p') || content;
+      p.innerHTML = buttons.map((btn) => `<span class="action-btn">${btn}</span>`).join('');
+      p.classList.add('aml-buttons-row');
+    }
+
+    // Cards row - detect by content
+    if (text.includes('Overall Survival') && text.includes('Remission')) {
+      const knownCards = [
+        'Overall Survival',
+        'Remission (CR and CR+CRh)',
+        'Transfusion Independence',
+        'Early Assessment with Bone Marrow',
+      ];
+      const cards = knownCards.filter((card) => text.includes(card));
+      const p = content.querySelector('p') || content;
+      p.innerHTML = cards.map((card) => `<span class="nav-card">${card}</span>`).join('');
+      p.classList.add('aml-cards-row');
     }
   });
 }
