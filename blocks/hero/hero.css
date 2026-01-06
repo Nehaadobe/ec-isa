@@ -259,3 +259,127 @@
     font-size: 24px;
   }
 }
+
+/* AML Action Buttons (NCCN, Study Design) */
+.hero.aml-buttons {
+  background: linear-gradient(180deg, #c9c9c9 0%, #b5956a 100%);
+  padding: 30px 24px;
+  min-height: auto;
+}
+
+.hero.aml-buttons > div > div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero.aml-buttons > div > div > p {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 100%;
+}
+
+.hero.aml-buttons .action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 25px;
+  background: transparent;
+  border: 2px solid #006d6d;
+  border-radius: 30px;
+  color: #006d6d;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 280px;
+  transition: all 0.2s;
+}
+
+.hero.aml-buttons .action-btn:hover {
+  background: rgba(0, 109, 109, 0.1);
+}
+
+.hero.aml-buttons .action-btn::after {
+  content: "⊕";
+  font-size: 20px;
+}
+
+/* AML Navigation Cards (Overall Survival, Remission, etc.) */
+.hero.aml-cards {
+  background: #004d4d;
+  padding: 20px 24px;
+  min-height: auto;
+}
+
+.hero.aml-cards > div > div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.hero.aml-cards > div > div > p {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
+}
+
+.hero.aml-cards .nav-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #006d6d;
+  border-radius: 8px;
+  color: #004d4d;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 200px;
+  transition: all 0.2s;
+}
+
+.hero.aml-cards .nav-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #00a0a0;
+}
+
+.hero.aml-cards .nav-card::after {
+  content: "→";
+  font-size: 20px;
+  background: #006d6d;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .hero.aml-buttons > div > div,
+  .hero.aml-buttons > div > div > p {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero.aml-buttons .action-btn {
+    min-width: 250px;
+  }
+
+  .hero.aml-cards > div > div,
+  .hero.aml-cards > div > div > p {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
