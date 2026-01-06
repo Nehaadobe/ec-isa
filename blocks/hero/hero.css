@@ -36,6 +36,66 @@
   }
 }
 
+/* Hero AML Navigation Bar */
+.hero.aml-nav {
+  display: block;
+  background: #004d4d;
+  padding: 0;
+  min-height: auto;
+}
+
+.hero.aml-nav > div {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.hero.aml-nav > div > div {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.hero.aml-nav > div > div > p {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin: 0;
+}
+
+.hero.aml-nav .nav-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  background: #003d3d;
+  color: white;
+  cursor: pointer;
+}
+
+.hero.aml-nav .nav-btn {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero.aml-nav .nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero.aml-nav .nav-btn.active {
+  background: #c5a028;
+  color: #004d4d;
+  font-weight: 600;
+}
+
 /* Hero AML Variant - Gray gradient with multi-color headline */
 .hero.aml {
   position: relative;
