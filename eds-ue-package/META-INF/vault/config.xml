@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vaultfs version="1.1">
+    <aggregator type="default">
+        <matches>
+            <include pattern="/content"/>
+            <include pattern="/apps"/>
+            <include pattern="/conf"/>
+        </matches>
+    </aggregator>
+</vaultfs>

@@ -1,0 +1,12 @@
+{
+  "mappings": [
+    {
+      "aem": "/content/venclexta",
+      "eds": "https://main--venclexta--your-org.aem.page"
+    }
+  ],
+  "defaultMapping": {
+    "aem": "/content",
+    "eds": "https://main--eds-project--your-org.aem.page"
+  }
+}

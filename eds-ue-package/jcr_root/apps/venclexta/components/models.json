@@ -1,0 +1,291 @@
+{
+  "sling:resourceType": "core/franklin/components/models",
+  "models": [
+    {
+      "id": "page",
+      "fields": [
+        {
+          "component": "text",
+          "name": "jcr:title",
+          "label": "Page Title",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "text",
+          "name": "jcr:description",
+          "label": "Description",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "pageTitle",
+          "label": "Navigation Title",
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "name": "cq:featuredimage",
+          "label": "Featured Image",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Hero Image",
+          "valueType": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "imageAlt",
+          "label": "Image Alt Text",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "richtext",
+          "name": "subtitle",
+          "label": "Subtitle",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "description",
+          "label": "Description",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "primaryCtaText",
+          "label": "Primary CTA Text",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "primaryCtaLink",
+          "label": "Primary CTA Link",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "secondaryCtaText",
+          "label": "Secondary CTA Text",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "secondaryCtaLink",
+          "label": "Secondary CTA Link",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "fields": [
+        {
+          "component": "select",
+          "name": "classes",
+          "label": "Card Style",
+          "valueType": "string",
+          "options": [
+            {"name": "Default", "value": ""},
+            {"name": "Navigation", "value": "nav"},
+            {"name": "Featured", "value": "featured"},
+            {"name": "Icon Cards", "value": "icons"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "card",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Card Image",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "richtext",
+          "name": "description",
+          "label": "Description",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Link",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "linkText",
+          "label": "Link Text",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
+      "id": "columns",
+      "fields": [
+        {
+          "component": "select",
+          "name": "columns",
+          "label": "Layout",
+          "valueType": "string",
+          "options": [
+            {"name": "2 Columns (50/50)", "value": "2"},
+            {"name": "3 Columns", "value": "3"},
+            {"name": "4 Columns", "value": "4"},
+            {"name": "Sidebar Left (30/70)", "value": "sidebar-left"},
+            {"name": "Sidebar Right (70/30)", "value": "sidebar-right"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fragment",
+      "fields": [
+        {
+          "component": "aem-content",
+          "name": "reference",
+          "label": "Fragment Path",
+          "valueType": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "section",
+      "fields": [
+        {
+          "component": "select",
+          "name": "style",
+          "label": "Section Style",
+          "valueType": "string",
+          "options": [
+            {"name": "Default", "value": ""},
+            {"name": "Hero (Teal)", "value": "hero-pharma-teal"},
+            {"name": "White Background", "value": "cards-white"},
+            {"name": "Dark Footer", "value": "footer-dark"},
+            {"name": "Highlight", "value": "highlight"},
+            {"name": "Full Width", "value": "full-width"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "text",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "text",
+          "label": "Text Content",
+          "valueType": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "reference",
+          "label": "Image",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "text",
+          "name": "alt",
+          "label": "Alt Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
+      "id": "button",
+      "fields": [
+        {
+          "component": "text",
+          "name": "text",
+          "label": "Button Text",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Link",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "select",
+          "name": "type",
+          "label": "Button Type",
+          "valueType": "string",
+          "options": [
+            {"name": "Primary", "value": "primary"},
+            {"name": "Secondary", "value": "secondary"},
+            {"name": "Tertiary", "value": "tertiary"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "fields": [
+        {
+          "component": "text",
+          "name": "text",
+          "label": "Title Text",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "select",
+          "name": "type",
+          "label": "Heading Level",
+          "valueType": "string",
+          "options": [
+            {"name": "H1", "value": "h1"},
+            {"name": "H2", "value": "h2"},
+            {"name": "H3", "value": "h3"},
+            {"name": "H4", "value": "h4"},
+            {"name": "H5", "value": "h5"},
+            {"name": "H6", "value": "h6"}
+          ]
+        }
+      ]
+    }
+  ]
+}

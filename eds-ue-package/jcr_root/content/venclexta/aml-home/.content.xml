@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AML Home"
+        jcr:description="AML treatment information page"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cq:template="/conf/venclexta/settings/wcm/templates/eds-page"
+        cq:lastModified="{Date}2025-01-07T12:00:00.000Z"
+        pageTitle="Venclexta AML Home">
+
+        <!-- Section 1: Hero -->
+        <section_1
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/section/v1/section"
+            style="hero-pharma-teal">
+            <hero
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/block/v1/block"
+                name="Hero"
+                model="hero"
+                classes="pharma">
+                <item_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block/item"
+                    name="image"
+                    imageReference="/content/dam/venclexta/aml-home/aml-home.png"
+                    imageAlt="Elderly patient representing AML treatment success"/>
+                <item_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block/item"
+                    name="content">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/title/v1/title"
+                        jcr:title="VENCLEXTA + AZACITIDINE WAS PROVEN TO HELP NEWLY DIAGNOSED AML PATIENTS LIVE LONGER"
+                        type="h1"/>
+                    <subtitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/title/v1/title"
+                        jcr:title="Median Overall Survival"
+                        type="h2"/>
+                    <stats
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/text/v1/text"
+                        text="&lt;p&gt;&lt;strong&gt;VEN+AZA 14.7 months&lt;/strong&gt; 95% CI: (11.9, 18.7) vs &lt;strong&gt;AZA 9.6 months&lt;/strong&gt; 95% CI: (7.4, 12.7)&lt;/p&gt;&lt;p&gt;OS: HR=0.66; 95% CI: (0.52, 0.85); P&amp;lt;0.001&lt;/p&gt;"/>
+                    <study_info
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/text/v1/text"
+                        text="&lt;p&gt;VIALE-A: A randomized (2:1), double-blind, placebo-controlled, multicenter, phase 3 study that evaluated the efficacy and safety of VENCLEXTA in combination with azacitidine.&lt;/p&gt;"/>
+                    <cta_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/button/v1/button"
+                        text="National Comprehensive Cancer Network (NCCN)"
+                        link="#nccn"
+                        type="primary"/>
+                    <cta_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/button/v1/button"
+                        text="Study Design"
+                        link="#study-design"
+                        type="primary"/>
+                </item_2>
+            </hero>
+        </section_1>
+
+        <!-- Section 2: Navigation Cards -->
+        <section_2
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/section/v1/section"
+            style="cards-white">
+            <cards
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/block/v1/block"
+                name="Cards"
+                model="cards"
+                classes="nav">
+                <card_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block/item"
+                    title="Overall Survival"
+                    link="/content/venclexta/aml-efficacy"
+                    linkText="Learn more"/>
+                <card_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block/item"
+                    title="Remission (CR and CR+CRh)"
+                    link="/content/venclexta/aml-efficacy#remission"
+                    linkText="Learn more"/>
+                <card_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block/item"
+                    title="Transfusion Independence"
+                    link="/content/venclexta/aml-efficacy#transfusion"
+                    linkText="Learn more"/>
+                <card_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block/item"
+                    title="Early Assessment With Bone Marrow Biopsy"
+                    link="/content/venclexta/aml-efficacy#assessment"
+                    linkText="Learn more"/>
+            </cards>
+        </section_2>
+
+        <!-- Section 3: Abbreviations Footer -->
+        <section_3
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/section/v1/section"
+            style="footer-dark">
+            <abbreviations
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/text/v1/text"
+                text="&lt;p&gt;AML=acute myeloid leukemia; AZA=azacitidine; CI=confidence interval; HR=hazard ratio; OS=overall survival; PBO=placebo; VEN+AZA=VENCLEXTA + azacitidine.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Actor portrayal.&lt;/em&gt;&lt;/p&gt;"/>
+        </section_3>
+
+        <!-- Section 4: ISI Fragment -->
+        <section_4
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/section/v1/section">
+            <fragment
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/block/v1/block"
+                name="Fragment"
+                model="fragment"
+                reference="/content/experience-fragments/venclexta/aml/isi/master"/>
+        </section_4>
+    </jcr:content>
+</jcr:root>

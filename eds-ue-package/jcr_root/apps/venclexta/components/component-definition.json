@@ -1,0 +1,187 @@
+{
+  "groups": [
+    {
+      "title": "Venclexta Blocks",
+      "id": "venclexta-blocks",
+      "components": [
+        {
+          "title": "Hero",
+          "id": "hero",
+          "model": {
+            "id": "hero",
+            "fields": [
+              {
+                "component": "reference",
+                "name": "image",
+                "label": "Hero Image",
+                "valueType": "string",
+                "required": true
+              },
+              {
+                "component": "richtext",
+                "name": "title",
+                "label": "Title",
+                "valueType": "string",
+                "required": true
+              },
+              {
+                "component": "richtext",
+                "name": "subtitle",
+                "label": "Subtitle",
+                "valueType": "string"
+              },
+              {
+                "component": "richtext",
+                "name": "description",
+                "label": "Description",
+                "valueType": "string"
+              },
+              {
+                "component": "text",
+                "name": "primaryCtaText",
+                "label": "Primary CTA Text",
+                "valueType": "string"
+              },
+              {
+                "component": "text",
+                "name": "primaryCtaLink",
+                "label": "Primary CTA Link",
+                "valueType": "string"
+              },
+              {
+                "component": "text",
+                "name": "secondaryCtaText",
+                "label": "Secondary CTA Text",
+                "valueType": "string"
+              },
+              {
+                "component": "text",
+                "name": "secondaryCtaLink",
+                "label": "Secondary CTA Link",
+                "valueType": "string"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Cards",
+          "id": "cards",
+          "model": {
+            "id": "cards",
+            "fields": [
+              {
+                "component": "multiselect",
+                "name": "classes",
+                "label": "Style",
+                "valueType": "string",
+                "options": [
+                  { "name": "Default", "value": "" },
+                  { "name": "Navigation Cards", "value": "nav" },
+                  { "name": "Featured Cards", "value": "featured" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "title": "Card Item",
+          "id": "card-item",
+          "model": {
+            "id": "card-item",
+            "fields": [
+              {
+                "component": "reference",
+                "name": "image",
+                "label": "Card Image",
+                "valueType": "string"
+              },
+              {
+                "component": "text",
+                "name": "title",
+                "label": "Title",
+                "valueType": "string",
+                "required": true
+              },
+              {
+                "component": "richtext",
+                "name": "description",
+                "label": "Description",
+                "valueType": "string"
+              },
+              {
+                "component": "text",
+                "name": "link",
+                "label": "Link URL",
+                "valueType": "string"
+              },
+              {
+                "component": "text",
+                "name": "linkText",
+                "label": "Link Text",
+                "valueType": "string"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Columns",
+          "id": "columns",
+          "model": {
+            "id": "columns",
+            "fields": [
+              {
+                "component": "select",
+                "name": "columns",
+                "label": "Number of Columns",
+                "valueType": "string",
+                "options": [
+                  { "name": "2 Columns", "value": "2" },
+                  { "name": "3 Columns", "value": "3" },
+                  { "name": "4 Columns", "value": "4" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fragment",
+          "id": "fragment",
+          "model": {
+            "id": "fragment",
+            "fields": [
+              {
+                "component": "aem-content",
+                "name": "reference",
+                "label": "Fragment Reference",
+                "valueType": "string",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "title": "Section Metadata",
+          "id": "section-metadata",
+          "model": {
+            "id": "section-metadata",
+            "fields": [
+              {
+                "component": "select",
+                "name": "style",
+                "label": "Section Style",
+                "valueType": "string",
+                "options": [
+                  { "name": "Default", "value": "" },
+                  { "name": "Hero Background", "value": "hero-pharma-teal" },
+                  { "name": "White Background", "value": "cards-white" },
+                  { "name": "Dark Footer", "value": "footer-dark" },
+                  { "name": "Highlight", "value": "highlight" }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "filters": [
+    {
+      "id": "section",
+      "components": [
+        "hero",
+        "cards",
+        "columns",
+        "fragment",
+        "text",
+        "image",
+        "button",
+        "title",
+        "section-metadata"
+      ]
+    },
+    {
+      "id": "cards",
+      "components": [
+        "card-item"
+      ]
+    },
+    {
+      "id": "columns",
+      "components": [
+        "text",
+        "image",
+        "button",
+        "title"
+      ]
+    },
+    {
+      "id": "hero",
+      "components": [
+        "text",
+        "image",
+        "button"
+      ]
+    }
+  ]
+}
