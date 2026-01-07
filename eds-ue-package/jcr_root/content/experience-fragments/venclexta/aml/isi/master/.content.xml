@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Master"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cq:xfVariantType="web">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/section/v1/section">
+            <indication
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/title/v1/title"
+                jcr:title="Indication"
+                type="h2"/>
+            <indication_text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/text/v1/text"
+                text="&lt;p&gt;[Indication content - to be populated with regulatory approved content]&lt;/p&gt;"/>
+            <isi_title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/title/v1/title"
+                jcr:title="Important Safety Information"
+                type="h2"/>
+            <isi_text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/text/v1/text"
+                text="&lt;p&gt;[Important Safety Information - to be populated with regulatory approved content]&lt;/p&gt;"/>
+        </root>
+    </jcr:content>
+</jcr:root>

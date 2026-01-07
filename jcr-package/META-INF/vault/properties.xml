@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="name">venclexta-aml-home-content</entry>
+    <entry key="version">1.0.0</entry>
+    <entry key="group">com.venclexta</entry>
+    <entry key="description">Venclexta AML Home Page Content Package for Universal Editor</entry>
+    <entry key="createdBy">migration-tool</entry>
+    <entry key="packageType">content</entry>
+    <entry key="requiresRoot">false</entry>
+    <entry key="acHandling">merge</entry>
+</properties>

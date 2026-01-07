@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/venclexta/aml-home"/>
+    <filter root="/content/dam/venclexta/aml-home"/>
+    <filter root="/content/experience-fragments/venclexta/aml"/>
+</workspaceFilter>
